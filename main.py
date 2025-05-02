@@ -200,7 +200,7 @@ def calculate_Field():
 electric_field, ax = plt.subplots()
 
 #Setup the function updating the coordinates of each charge
-def update_movement(frame):
+def update_Movement(frame):
     ax.clear()
     ax.set_title('Moving point charges')
     ax.set_xlabel('X (m)')
@@ -213,12 +213,6 @@ def update_movement(frame):
     position_Charge()
 
 #Animate the moving charges
-ani = FuncAnimation(electric_field, update_movement, frames = len(t), interval = ((s / frames) * 1000), blit = False)
+ani = FuncAnimation(electric_field, update_Movement, frames = len(t), interval = ((s / frames) * 1000), blit = False)
 ani.save('animation.gif', writer = 'Pillow')
 plt.show()
-
-
-
-
-
-
